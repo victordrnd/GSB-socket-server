@@ -3,6 +3,5 @@
         "node_modules{,/**}",
         ".vscode{,/**}"
     ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/1df72d83-0ef0-4273-b09a-c22466b4c02f/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/gsb-socket",
     "appService.deploySubpath": ""
 }
