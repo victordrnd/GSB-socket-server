@@ -4,7 +4,7 @@ const io = require('socket.io')(http, {origins : '*:*'});
 
 let connectedUsers = [];
 io.configure(function() {
-    io.set('transports', ['websocket', 'polling', 'flashsocket']);
+    //io.set('transports', ['websocket', 'polling', 'flashsocket']);
     io.set('match origin protocol', true);
 });
 io.on("connection", socket => {
