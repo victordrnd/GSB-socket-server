@@ -6,6 +6,7 @@ let connectedUsers = [];
 io.configure(function() {
     io.set('transports', ['websocket']);
     io.set('match origin protocol', true);
+    io.set('origins', '*:*');
 });
 io.on("connection", socket => {
     console.log('new connection');
