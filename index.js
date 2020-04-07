@@ -47,4 +47,4 @@ io.on("connection", socket => {
 function getActiveUsers(){
     return connectedUsers;
 }
-http.listen(443, '0.0.0.0');
+http.listen(process.env.PORT || 3000, 'localhost');
