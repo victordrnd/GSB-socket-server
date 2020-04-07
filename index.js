@@ -1,12 +1,11 @@
 const app = require('express')();
 const http = require('http').Server(app);
-const io = require('socket.io')(http);
+const io = require('socket.io')(http, {origins : '*:*'});
 
 let connectedUsers = [];
 io.configure(function() {
-    io.set('transports', ['websocket']);
+    io.set('transports', ['websocket', 'polling', 'flashsocket']);
     io.set('match origin protocol', true);
-    io.set('origins', '*:*');
 });
 io.on("connection", socket => {
     console.log('new connection');
