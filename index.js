@@ -27,7 +27,7 @@ io.on("connection", socket => {
     });
 
     socket.on('frais.status_change', data => {
-        socket.broadcast.emit('frais_created', {});
+        socket.broadcast.emit('frais_status_change', {});
     })
 
     socket.on('users.connected', data => {
